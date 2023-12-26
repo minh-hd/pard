@@ -1,4 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
+import Markdown from "react-markdown";
 
 type Message = {
     content: string
@@ -56,7 +57,11 @@ function App() {
                 {messages?.map((message, _index) =>
                     <div key={_index}>
                         <div className={`message-container ${message.type}-container`}>
-                            <div className={`${message.type} bubble`}>{message.content}</div>
+                            <div className={`${message.type} bubble`}>
+                                <Markdown>
+                                    {message.content}
+                                </Markdown>
+                            </div>
                         </div>
                     </div>
                 )}

@@ -1,13 +1,97 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(227, 227, 227);
+    height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2, h3 {
+    margin: 5px;
+}
+
+.chat-bot {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-bot-header {
+    height: 10%;
+}
+
+.info-container {
+    height: 60px;
+    background: linear-gradient(rgb(22, 197, 141), rgb(6, 120, 84));
+    padding: 25px;
+    color: rgb(244, 244, 244);
+}
+
+.feed {
+    width: 100%;
+    overflow-y: auto;
+    height: 80vh;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    height: 10vh;
+}
+
+input {
+    border: none;
+    box-sizing: border-box;
+    padding: 25px 70px 25px 25px;
+    border-top: 1px solid rgb(207, 207, 207);
+    resize: none;
+    width: 90%;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    width: 10%;
+    background-color: rgb(6, 120, 84);
+    color: rgb(244, 244, 244);
+    border: none;
+    height: 100%;
+}
+
+.bubble {
+    max-width: 80%;
+    padding: 20px;
+    margin: 10px 25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    color: rgb(74, 74, 74);
+    white-space: pre-line;
+}
+
+.question {
+    background-color: rgb(6, 120, 84);
+    color: rgb(244, 244, 244);
+}
+
+.question-container {
+    justify-content: right;
+}
+
+.response {
+    background-color: rgb(244, 244, 244);
+}
+
+.message-container {
+    display: flex;
+}
+
+.submitting {
+    margin: 10px 25px;
+    color: rgb(108, 108, 108);
+    font-style: italic;
 }
